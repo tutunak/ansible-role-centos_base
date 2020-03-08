@@ -1,2 +1,5 @@
 ---
-# defaults file for ansible-role-centos_base
+centos_base_enable_epel: false
+centos_base_firewalld: false
+centos_base_packages_list: []
+centos_base_update: false

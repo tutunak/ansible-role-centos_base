@@ -1,2 +1,32 @@
 ---
-# tasks file for ansible-role-centos_base
+- name: Install and enable epel
+  package:
+    name: epel-release
+    state: present
+  when: centos_base_enable_epel
+
+- name: Install basic packages
+  package:
+    name: "{{ centos_base_packages_list }}"
+    state: present
+
+- name: Install firewalld
+  package:
+    name: firewalld
+    state: present
+  when: centos_base_firewalld
+
+- name: Ensure firewalld started
+  service:
+    name: firewalld.service
+    state: started
+    enabled: yes
+  when: centos_base_firewalld
+
+- name: Update
+  yum:
+    name: '*'
+    state: latest
+  when: centos_base_update
+  tags:
+    - skip_ansible_lint
