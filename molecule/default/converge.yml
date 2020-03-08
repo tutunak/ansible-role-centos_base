@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include ansible-role-centos_base"
+      include_role:
+        name: "ansible-role-centos_base"
