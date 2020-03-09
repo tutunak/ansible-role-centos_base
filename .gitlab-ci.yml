@@ -1,0 +1,22 @@
+---
+image: docker:git
+before_script:
+  - apk update && apk add --no-cache docker
+    python3-dev py3-pip docker gcc git curl build-base
+    autoconf automake py3-cryptography linux-headers
+    musl-dev libffi-dev openssl-dev openssh
+  - docker info
+  - python3 --version
+
+services:
+  - docker:dind
+
+stages:
+  - molecule
+
+version94:
+  stage: molecule
+  script:
+    - pip3 install ansible molecule docker
+    - ansible --version
+    - molecule test
