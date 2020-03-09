@@ -1,15 +1,14 @@
 ---
-image: docker:git
-before_script:
-  - apk update && apk add --no-cache docker
-    python3-dev py3-pip docker gcc git curl build-base
-    autoconf automake py3-cryptography linux-headers
-    musl-dev libffi-dev openssl-dev openssh
-  - docker info
-  - python3 --version
-
+image: quay.io/ansible/molecule:3.0.2
 services:
   - docker:dind
+before_script:
+  # - apk update && apk add --no-cache docker
+  #   python3-dev py3-pip docker gcc git curl build-base
+  #   autoconf automake py3-cryptography linux-headers
+  #   musl-dev libffi-dev openssl-dev openssh
+  - docker info
+  - python3 --version
 
 stages:
   - molecule
@@ -20,3 +19,5 @@ testing:
     - pip3 install ansible molecule docker
     - ansible --version
     - molecule test
+  variables:
+    DOCKER_HOST: "tcp://docker:2375"
