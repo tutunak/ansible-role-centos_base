@@ -19,3 +19,5 @@ testing:
     - pip3 install ansible molecule docker
     - ansible --version
     - molecule test
+  variables:
+    DOCKER_HOST: "tcp://docker:2375"
