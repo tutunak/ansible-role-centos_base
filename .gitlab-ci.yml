@@ -1,12 +1,9 @@
 ---
 image: quay.io/ansible/molecule:3.0.2
-# before_script:
-#   - apk update && apk add --no-cache docker
-#     python3-dev py3-pip docker gcc git curl build-base
-#     autoconf automake py3-cryptography linux-headers
-#     musl-dev libffi-dev openssl-dev openssh
-#   - docker info
-#   - python3 --version
+before_script:
+  - apk update && apk add --no-cache docker
+  - docker info
+  - python3 --version
 
 services:
   - docker:dind
