@@ -14,7 +14,7 @@ services:
 stages:
   - molecule
 
-version94:
+testing:
   stage: molecule
   script:
     - pip3 install ansible molecule docker
