@@ -2,8 +2,6 @@
 image: quay.io/ansible/molecule:3.0.2
 before_script:
   - apk update && apk add --no-cache docker
-  - docker info
-  - python3 --version
 
 services:
   - docker:dind
