@@ -1,0 +1,10 @@
+---
+defaults:
+  centos_base_enable_epel:
+    help: TODO.
+  centos_base_firewalld:
+    help: TODO.
+  centos_base_packages_list:
+    help: TODO.
+  centos_base_update:
+    help: TODO.

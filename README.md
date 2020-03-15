@@ -1,38 +1,57 @@
-Role Name
-=========
+# ansible-role-centos_base
 
-A brief description of the role goes here.
+## Table Of Contents
 
-Requirements
-------------
+* [About](#about)
+* [Role Defaults](#role-defaults)
+* [License](#license)
+* [Author](#author)
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+## About
 
-Role Variables
---------------
+> Centos preconfiguration
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+[Back to table of contents](#table-of-contents)
 
-Dependencies
-------------
+## Role Defaults
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+**Quicklist**: [centos_base_enable_epel](#centos_base_enable_epel),
+[centos_base_firewalld](#centos_base_firewalld),
+[centos_base_packages_list](#centos_base_packages_list),
+[centos_base_update](#centos_base_update)
 
-Example Playbook
-----------------
+### centos_base_enable_epel 
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+* *help*: TODO.
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+[Back to table of contents](#table-of-contents)
 
-License
--------
+### centos_base_firewalld 
 
-BSD
+* *help*: TODO.
 
-Author Information
-------------------
+[Back to table of contents](#table-of-contents)
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+### centos_base_packages_list 
+
+* *help*: TODO.
+
+[Back to table of contents](#table-of-contents)
+
+### centos_base_update 
+
+* *help*: TODO.
+
+[Back to table of contents](#table-of-contents)
+
+## License
+
+MIT
+
+[Back to table of contents](#table-of-contents)
+
+## Author
+
+Dmitriy Kotov
+
+[Back to table of contents](#table-of-contents)
